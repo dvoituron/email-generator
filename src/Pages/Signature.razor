@@ -1,0 +1,47 @@
+@page "/signature"
+@inject Models.Signature SignatureValue
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="form-group">
+                <label for="firstname">Prénom</label>
+                <input type="text" class="form-control" id="firstname" placeholder="John" @bind="SignatureValue.FirstName">
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-group">
+                <label for="lastname">Nom</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Smith" @bind="SignatureValue.LastName">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="IT Consultant" @bind="SignatureValue.Title">
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="text" class="form-control" id="phone" placeholder="+32 (0)475 10 00 00" @bind="SignatureValue.Phone">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <div class="form-group">
+                <label for="citation">Citation</label>
+                <input type="text" class="form-control" id="citation" placeholder="As a kid, I wanted to be a fighter pilot" @bind="SignatureValue.Citation">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="height:60px;">&nbsp;</div>
+
+<center>
+    <SignaturePreview Value="@SignatureValue" />
+</center>
