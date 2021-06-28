@@ -37,7 +37,11 @@ namespace EmailGenerator.Models
 
         public string GetImageUrl(string value)
         {
+#if DEBUG
             return $"https://localhost:5001/images/{CompanyFolder}/{value}";
+#else
+            return $"https://signaturegenerator.z6.web.core.windows.net/images/{CompanyFolder}/{value}";
+#endif
         }
     }
 }
