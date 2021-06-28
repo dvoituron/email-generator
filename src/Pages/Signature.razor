@@ -57,12 +57,23 @@
 
     <center>
         <div style="border: 1px gray solid; width: 650px;">
-            <SignaturePreview Value="@SignatureValue" />                        
+            <SignaturePreview @ref="preview" Value="@SignatureValue" />                        
         </div> 
 
         <div style="width: 650px; text-align: right; margin: 20px 0px;">
-            <button class="btn-primary">Copier la signature</button>
+            <button class="btn-primary" @onclick="CopyToClipboard_Click">Copier la signature</button>
         </div>
     </center>
 
 </div>
+
+@code 
+{
+    SignaturePreview preview;
+
+    private async void CopyToClipboard_Click()
+    {
+        await preview.CopyToClipboardAsync();
+    }
+
+}
