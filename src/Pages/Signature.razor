@@ -4,6 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md">
+            1. Complétez ce formulaire pour pré-visualiser votre signature.<br />
+            2. Appuyez sur le bouton [Copier la signature].<br />
+            3. Suivez les étapes dans l'aide pour coller votre signature dans GMail, Outlook, ...<br />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
             <div class="form-group">
                 <label for="firstname">Prénom</label>
                 <input type="text" class="form-control" id="firstname" placeholder="John" @bind="SignatureValue.FirstName">
@@ -19,7 +33,7 @@
     <div class="row">
         <div class="col-md">
             <div class="form-group">
-                <label for="title">Title</label>
+                <label for="title">Titre</label>
                 <input type="text" class="form-control" id="title" placeholder="IT Consultant" @bind="SignatureValue.Title">
             </div>
         </div>
@@ -38,10 +52,17 @@
             </div>
         </div>
     </div>
+
+    <div style="height:60px;">&nbsp;</div>
+
+    <center>
+        <div style="border: 1px gray solid; width: 650px;">
+            <SignaturePreview Value="@SignatureValue" />                        
+        </div> 
+
+        <div style="width: 650px; text-align: right; margin: 20px 0px;">
+            <button class="btn-primary">Copier la signature</button>
+        </div>
+    </center>
+
 </div>
-
-<div style="height:60px;">&nbsp;</div>
-
-<center>
-    <SignaturePreview Value="@SignatureValue" />
-</center>

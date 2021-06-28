@@ -21,7 +21,23 @@ namespace EmailGenerator.Models
         public string Citation { get; set; } = "As a kid, I wanted to be a fighter pilot";
 
         [Parameter]
-        public string Logo { get; set; } = "/images/igroove.png";
+        public string CompanyFolder { get; set; } = "igroove";
 
+        [Parameter]
+        public string UrlCompany { get; set; } = "www.igroove.be";
+
+        [Parameter]
+        public string UrlLinkedin { get; set; } = "linkedin.com";
+
+        [Parameter]
+        public string UrlFacebook { get; set; } = "facebook.com";
+
+        [Parameter]
+        public string UrlInstagram { get; set; } = "instagram.com";
+
+        public string GetImageUrl(string value)
+        {
+            return $"https://localhost:5001/images/{CompanyFolder}/{value}";
+        }
     }
 }
