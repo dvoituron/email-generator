@@ -35,6 +35,11 @@ namespace EmailGenerator.Models
         [Parameter]
         public string UrlInstagram { get; set; } = "instagram.com";
 
+        public void SetCompany(string value)
+        {
+            CompanyFolder = value;
+        }
+
         public string GetImageUrl(string value)
         {
 #if DEBUG

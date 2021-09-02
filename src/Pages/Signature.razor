@@ -1,4 +1,4 @@
-@page "/signature"
+@page "/signature/{Company?}"
 @inject Models.Signature SignatureValue
 
 <div class="container">
@@ -57,8 +57,8 @@
 
     <center>
         <div style="border: 1px gray solid; width: 650px;">
-            <SignaturePreview @ref="preview" Value="@SignatureValue" />                        
-        </div> 
+            <SignaturePreview @ref="Preview" Value="@SignatureValue" />
+        </div>
 
         <div style="width: 650px; text-align: right; margin: 20px 0px;">
             <button class="btn-primary" @onclick="CopyToClipboard_Click">Copier la signature</button>
@@ -67,13 +67,21 @@
 
 </div>
 
-@code 
+@code
 {
-    SignaturePreview preview;
+    private SignaturePreview Preview;
+
+    [Parameter]
+    public string Company { get; set; }
+
+    protected override void OnInitialized()
+    {
+        SignatureValue.SetCompany(Company);
+    }
 
     private async void CopyToClipboard_Click()
     {
-        await preview.CopyToClipboardAsync();
+        await Preview.CopyToClipboardAsync();
     }
 
 }
