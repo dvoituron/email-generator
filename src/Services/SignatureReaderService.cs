@@ -19,6 +19,9 @@ namespace EmailGenerator.Services
 
         public async Task<Models.Signature> GetSignatureAsync(string company)
         {
+            if (String.IsNullOrEmpty(company))
+                company = "oniryx";
+
             var signature = await _httpClient.GetFromJsonAsync<Models.Signature>($"settings/{company}.json");
             signature.SetCompanyFolder(company.ToLower());
             return signature;
