@@ -27,6 +27,9 @@ namespace EmailGenerator.Models
         public string CompanyFolder { get; set; } = "igroove";
 
         [Parameter]
+        public string UrlRoot { get; set; } = "https://localhost:5001";
+
+        [Parameter]
         public string UrlCompany { get; set; } = "www.igroove.be";
 
         [Parameter]
@@ -38,18 +41,14 @@ namespace EmailGenerator.Models
         [Parameter]
         public string UrlInstagram { get; set; } = "instagram.com";
 
-        public void SetCompany(string value)
+        public void SetCompanyFolder(string company)
         {
-            CompanyFolder = value;
+            CompanyFolder = company;
         }
 
         public string GetImageUrl(string value)
         {
-#if DEBUG
-            return $"https://localhost:5001/images/{CompanyFolder}/{value}";
-#else
-            return $"https://signaturegenerator.z6.web.core.windows.net/images/{CompanyFolder}/{value}";
-#endif
+            return $"{UrlRoot}/images/{CompanyFolder}/{value}";
         }
     }
 }

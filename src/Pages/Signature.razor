@@ -1,5 +1,5 @@
 @page "/signature/{Company?}"
-@inject Models.Signature SignatureValue
+@inject Services.SignatureReaderService SignatureService
 
 <div class="container">
     <div class="row">
@@ -78,13 +78,14 @@
 @code
 {
     private SignaturePreview Preview;
+    private Models.Signature SignatureValue = new Models.Signature();
 
     [Parameter]
     public string Company { get; set; }
 
-    protected override void OnInitialized()
+    protected async override Task OnInitializedAsync()
     {
-        SignatureValue.SetCompany(Company);
+        SignatureValue = await SignatureService.GetSignatureAsync(Company);
     }
 
     private async void CopyToClipboard_Click()

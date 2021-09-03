@@ -20,6 +20,7 @@ namespace EmailGenerator
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<Models.Signature>();
+            builder.Services.AddScoped<Services.SignatureReaderService>();
 
             await builder.Build().RunAsync();
         }
