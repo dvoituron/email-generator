@@ -1,6 +1,6 @@
 {
-	"UrlRootProd": "https://signaturegenerator.z6.web.core.windows.net",
-	"UrlRoot": "https://localhost:5001",
+	"UrlRoot": "https://signaturegenerator.z6.web.core.windows.net",
+	"UrlRootDev": "https://localhost:5001",
 	"UrlCompany": "www.i-groove.be",
 	"UrlLinkedin": "linkedin.com/company/i-groove",
 	"UrlFacebook": "facebook.com/I-Groove-102900228611811",
