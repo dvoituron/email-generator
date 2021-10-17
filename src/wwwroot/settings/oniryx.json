@@ -1,10 +1,10 @@
 {
-	"UrlRoot": "https://signaturegenerator.z6.web.core.windows.net",
+	"UrlRoot": "https://signature.oniryx.be",
 	"UrlRootDev": "https://localhost:5001",
 	"UrlCompany": "www.oniryx.be",
 	"UrlLinkedin": "linkedin.com/company/oniryx",
 	"UrlFacebook": "facebook.com/Oniryx.ICT",
 	"UrlInstagram": "instagram.com/oniryxict",
-	"Citation": "As a kid, I wanted to be a fighter pilot",
-	"Legal": "The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future."
+	"Citation": "",
+	"Legal": "Cet e-mail et ses éventuelles pièces jointes peuvent contenir des informations confidentielles et sont exclusivement adressés au(x) destinataire(s) mentionné(s). Toute utilisation de ces documents, notamment l’impression, la copie ou la distribution, doit se faire dans le respect des droits applicables. Si vous recevez ce message par erreur, veuillez le détruire et avertir immédiatement l'expéditeur. Le groupe Blacksheep décline toute responsabilité si ce message a été modifié ou falsifié."
 }
