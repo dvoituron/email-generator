@@ -15,7 +15,10 @@ namespace EmailGenerator.Models
         public string Title { get; set; } = "IT Consultant";
 
         [Parameter]
-        public string Phone { get; set; } = "+32 (0)475 10 00 00";
+        public string Phone { get; set; } = "+32 475 10 00 00";
+
+        [Parameter]
+        public string Phone2 { get; set; } = "";
 
         [Parameter]
         public string Citation { get; set; } = "";

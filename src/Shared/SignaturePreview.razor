@@ -23,7 +23,20 @@
                             <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">@Value.Phone</td>
+                            <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">
+                                @if (!String.IsNullOrWhiteSpace(Value.Phone))
+                                {
+                                <a href="tel:@Value.Phone.Replace(" ", "")" style="color: black;" target="_blank">@Value.Phone</a>
+                                }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">
+                                @if (!String.IsNullOrWhiteSpace(Value.Phone2))
+                                {
+                                <a href="tel:@Value.Phone2.Replace(" ", "")" style="color: black;" target="_blank">@Value.Phone2</a>
+                                }
+                            </td>
                         </tr>
                         <tr>
                             <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">&nbsp;</td>
@@ -32,7 +45,7 @@
                             <td style="font-size: 10pt; font-family: Arial, sans-serif; text-align: center;">
                                 @if (!String.IsNullOrWhiteSpace(Value.Citation))
                                 {
-                                    <i>"@Value.Citation"</i>
+                                <i>"@Value.Citation"</i>
                                 }
                             </td>
                         </tr>
