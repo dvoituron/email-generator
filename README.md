@@ -39,7 +39,7 @@ By participating in this project you agree to abide by its terms.
 ## Pull requests
 Pull requests serve as the primary mechanism by which contributions are proposed and accepted. 
 We recommend creating a [topic branch](https://www.git-scm.com/book/en/v2/Git-Branching-Branching-Workflows#Topic-Branches) 
-and sending a pull request to the `vNext` branch from the topic branch. 
+and sending a pull request to the **main** branch from the topic branch. 
 For additional guidance, read through the [GitHub Flow Guide](https://guides.github.com/introduction/flow).
 
 Be prepared to address feedback on your pull request and iterate if necessary.
