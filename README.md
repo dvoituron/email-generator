@@ -25,7 +25,9 @@ By participating in this project you agree to abide by its terms.
 - Fork this repository on GitHub
 - Download and install [Download .NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
 - Open this code from [VS Code, Visual Studio](https://visualstudio.microsoft.com/) or your favorite editor.
-- Run the project from the _src_ folder: `dotnet watch` or `dotnet run`.
+- Run the project from the _src_ folder: 
+   - `dotnet build`
+   - `dotnet watch run`
 
 ### Documentation styleguide
 - Respect this [C# Naming Conventions](https://dvoituron.com/naming-conventions/).
